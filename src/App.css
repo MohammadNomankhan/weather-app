@@ -1,0 +1,119 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat";
+  font-style: normal;
+  /*  color: #050505;*/
+  box-sizing: border-box;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* weather display */
+
+.weatherDisplay {
+  width: 94.4rem;
+  height: 62.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weatherDisplayLeft {
+  position: relative;
+  flex-basis: 45%;
+  background-size: cover;
+  background-position: top;
+  height: 110%;
+  border-radius: 3rem;
+  background-image: url(./assets/dummy-image.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.weatherDisplayRight {
+  flex-basis: 55%;
+  background-color: #222831;
+  height: 100%;
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+}
+
+.weatherDay {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4.5rem;
+}
+
+.weatherDate {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.7rem;
+}
+
+.weatherLocation img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.weatherLocation span {
+  width: 11rem;
+  height: 2.5rem;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.weatherImage img {
+  width: 9.5rem;
+  height: 9.5rem;
+}
+
+.weatherTemperature {
+  width: 13rem;
+  height: 6rem;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6rem;
+}
+
+.weatherType {
+  width: 14rem;
+  height: 3rem;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.7rem;
+}
+
+.weatherDisplayLeftTop,
+.weatherDisplayLeftBottom {
+  margin-left: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
