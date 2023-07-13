@@ -151,10 +151,12 @@ body.toggle .grid * {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 240px);
+    /*    grid-template-columns: repeat(2, 240px);*/
     grid-gap: 32px;
     position: relative;
     z-index: 1;
+    border: 1px solid var(--card-icon-border-color);
+    padding: 2rem;
 }
 .card {
     background-color: var(--background-color);
@@ -210,7 +212,7 @@ body.toggle .grid * {
 
     font-family: inherit;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 2;
     color: var(--card-label-color);
 }

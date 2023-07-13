@@ -11,28 +11,28 @@ const WeatherDisplay = ({ weatherData }) => {
 			<div className="grid">
 				<div className="card">
 					<h4 className="header">{weatherData.name}</h4>
-					{/*<Button
-						className="button"
-						inverted
-						color="blue"
-						circular
-						icon="refresh"
-						onClick={refresh}
-					/>*/}
 					<div className="main">
 						<div className="flex">
 							<p className="day">
 								{moment().format("dddd")},{" "}
 								<span>{moment().format("LL")}</span>
 							</p>
-							<p className="description">
+							<p
+								className="description"
+								style={{
+									fontWeight: "700",
+									fontSize: "1.35rem",
+								}}
+							>
 								{weatherData.weather[0].main}
 							</p>
 						</div>
 
 						<div className="flex">
 							<p className="temp">
-								Temprature: {weatherData.main.temp} &deg;C
+								Temprature:{" "}
+								{(weatherData.main.temp - 273.15).toFixed(2)}{" "}
+								&deg;C
 							</p>
 							<p className="temp">
 								Humidity: {weatherData.main.humidity} %
@@ -77,11 +77,6 @@ const WeatherDisplay = ({ weatherData }) => {
 					</div>
 				</div>
 			</div>
-
-			{/*<label className="day-night">
-				<input type="checkbox" checked />
-				<div></div>
-			</label>*/}
 		</>
 	);
 };
